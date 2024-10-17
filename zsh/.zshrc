@@ -75,11 +75,12 @@ alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
 alias c='clear'
 alias ..='cd ..'
 alias ...='cd ../..'
+unalias zi
 
 # Environment Variables
 export EDITOR='nvim'
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh)"
 
