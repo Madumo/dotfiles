@@ -11,13 +11,13 @@ after-login-command = []
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
   'exec-and-forget sketchybar',
-#  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=4.0'
+  #  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=4.0'
 ]
 
 exec-on-workspace-change = [
-    '/bin/bash',
-    '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE'
+  '/bin/bash',
+  '-c',
+  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
 ]
 
 
@@ -62,11 +62,11 @@ on-focus-changed = "move-mouse window-lazy-center"
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
 inner.horizontal = 8
-inner.vertical =   8
-outer.left =       8
-outer.bottom =     8
-outer.top =        [{monitor."Built-in" = 13}, 45]
-outer.right =      8
+inner.vertical = 8
+outer.left = 8
+outer.bottom = 8
+outer.top = [{ monitor."Built-in" = 13 }, 45]
+outer.right = 8
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -205,14 +205,15 @@ E = 'Built-in'
 R = 'Built-in'
 
 
-
-
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = ['layout floating tiling', 'mode main'] # Toggle between floating and tiling layout
+f = [
+  'layout floating tiling',
+  'mode main',
+] # Toggle between floating and tiling layout
 backspace = ['close-all-windows-but-current', 'mode main']
 
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
@@ -228,10 +229,10 @@ if.app-id = 'company.thebrowser.Browser'
 check-further-callbacks = true
 run = ['move-node-to-workspace Q']
 
-[[on-window-detected]]
-if.app-id = 'com.github.wez.wezterm'
-check-further-callbacks = true
-run = ['move-node-to-workspace 1']
+#[[on-window-detected]]
+#if.app-id = 'com.github.wez.wezterm'
+#check-further-callbacks = true
+#run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.dt.Xcode'
@@ -247,4 +248,3 @@ run = ['move-node-to-workspace W']
 if.app-id = 'com.apple.iCal'
 check-further-callbacks = true
 run = ['move-node-to-workspace R']
-
