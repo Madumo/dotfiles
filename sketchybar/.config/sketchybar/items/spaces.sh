@@ -23,14 +23,13 @@ sorted_spaces=$(echo "$spaces" | awk -v order="$space_order" '
     }
 ')
 
-while read -r space
-do
-  read sid m <<< $(echo "$space" | awk '{print $1, $2}')
+while read -r space; do
+  read sid m <<<$(echo "$space" | awk '{print $1, $2}')
   space=(
     space="$sid"
     icon="$sid"
     display=$m
-    label.padding_right=20
+    label.padding_right=10
     label.font="sketchybar-app-font:Regular:16.0"
     label.y_offset=-1
     background.color=$ITEM_BG_COLOR
@@ -38,18 +37,17 @@ do
     icon.color=$WHITE
     script="$PLUGIN_DIR/space.sh $sid"
   )
- 
+
   sketchybar --add space space.$sid left \
-              --subscribe space.$sid aerospace_workspace_change \
-              --set space.$sid "${space[@]}"
-done <<< "${sorted_spaces}"
+    --subscribe space.$sid aerospace_workspace_change \
+    --set space.$sid "${space[@]}"
+done <<<"${sorted_spaces}"
 
-sketchybar --add item space_separator left                             \
-           --set space_separator icon="􀆊"                              \
-                                 icon.color=$WHITE                     \
-                                 icon.padding_left=4                   \
-                                 label.drawing=off                     \
-                                 background.drawing=off                \
-                                 script="$PLUGIN_DIR/space_windows.sh" \
-           --subscribe space_separator aerospace_workspace_change
-
+sketchybar --add item space_separator left \
+  --set space_separator icon="􀆊" \
+  icon.color=$WHITE \
+  icon.padding_left=4 \
+  label.drawing=off \
+  background.drawing=off \
+  script="$PLUGIN_DIR/space_windows.sh" \
+  --subscribe space_separator aerospace_workspace_change
