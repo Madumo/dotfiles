@@ -87,4 +87,5 @@ export EDITOR='nvim'
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
+eval "$(mise activate zsh)"
 
