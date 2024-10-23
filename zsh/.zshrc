@@ -79,6 +79,9 @@ alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
 alias c='clear'
 alias ..='cd ..'
 alias ...='cd ../..'
+alias icat='wezterm imgcat'
+alias cat='bat'
+
 unalias zi
 
 # Environment Variables
