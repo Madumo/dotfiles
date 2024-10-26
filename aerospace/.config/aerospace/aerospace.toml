@@ -248,3 +248,9 @@ run = ['move-node-to-workspace W']
 if.app-id = 'com.apple.iCal'
 check-further-callbacks = true
 run = ['move-node-to-workspace R']
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.com.zen.browser'
+if.window-title-regex-substring = 'Picture-in-Picture'
+run = 'layout floating'
+check-further-callbacks = true
