@@ -254,3 +254,9 @@ if.app-id = 'org.mozilla.com.zen.browser'
 if.window-title-regex-substring = 'Picture-in-Picture'
 run = 'layout floating'
 check-further-callbacks = true
+
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = 'layout floating'
+check-further-callbacks = true
