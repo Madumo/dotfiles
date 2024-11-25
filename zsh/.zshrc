@@ -72,7 +72,7 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='ls -lah --color'
+alias ls='eza --long --all --header --group-directories-last --icons --no-user --no-permissions'
 alias nv='nvim'
 alias vi='nvim'
 alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
