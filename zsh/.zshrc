@@ -81,6 +81,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias icat='wezterm imgcat'
 alias cat='bat'
+alias wtr='curl -s wttr.in/yqb | grep -v @igor_chubin'
 
 unalias zi
 
