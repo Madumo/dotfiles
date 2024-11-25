@@ -193,12 +193,12 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 alt-shift-semicolon = 'mode service'
 
 [workspace-to-monitor-force-assignment]
-1 = ['DELL', 'LG']
-2 = ['DELL', 'LG']
-3 = ['DELL', 'LG']
-4 = ['DELL', 'LG']
-5 = ['DELL', 'LG']
-6 = ['DELL', 'LG']
+1 = ['LG']
+2 = ['LG']
+3 = ['LG']
+4 = ['LG']
+5 = ['DELL U2717D', 'LG']
+6 = ['DELL U2717D', 'LG']
 Q = 'Built-in'
 W = 'Built-in'
 E = 'Built-in'
