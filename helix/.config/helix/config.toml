@@ -1,1 +1,10 @@
 theme = "catppuccin_mocha_transparent"
+
+[editor]
+line-number = "relative"
+insert-final-newline = true
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
