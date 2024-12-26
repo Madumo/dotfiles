@@ -31,10 +31,6 @@ zinit light Aloxaf/fzf-tab
 zinit snippet OMZL::git.zsh
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
-zinit snippet OMZP::archlinux
-zinit snippet OMZP::aws
-zinit snippet OMZP::kubectl
-zinit snippet OMZP::kubectx
 zinit snippet OMZP::command-not-found
 
 # Load completions
@@ -75,22 +71,23 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='eza --long --all --header --group-directories-last --icons --no-user --no-permissions'
 alias nv='nvim'
 alias vi='nvim'
-alias inv='nvim $(fzf -m --preview="bat --color=always {}")'
+alias inv='nvim $(fzf -m --tmux 70% --preview="bat --theme=base16-256 --color=always {}")'
 alias c='clear'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias icat='wezterm imgcat'
-alias cat='bat'
-alias wtr='curl -s wttr.in/yqb | grep -v @igor_chubin'
+alias cat='bat --theme=base16-256'
+#alias wtr='curl -s wttr.in/yqb | grep -v @igor_chubin | bat --style=plain'
+alias wtr='curl -s wttr.in/yqb | grep -v @igor_chubin | less -R'
 
-unalias zi
+#unalias zi
 
 # Environment Variables
 export EDITOR='nvim'
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd cd)"
 eval "$(mise activate zsh)"
 
-eval "$(zellij setup --generate-auto-start zsh)"
+#eval "$(zellij setup --generate-auto-start zsh)"
