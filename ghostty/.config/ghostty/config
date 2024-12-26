@@ -1,0 +1,9 @@
+theme = rose-pine
+
+font-family = "JetBrainsMono Nerd Font"
+font-size = 20
+
+window-decoration = false
+window-padding-x = 8
+window-padding-y = 4
+
